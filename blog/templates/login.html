@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form action="" method="post">
+    <form action="" method="get">
     {{form.csrf_token}}
     {{ form.username.lable  }} {{ form.username }}
-    {{ form.email.lable  }} {{ form.email }}
     {{ form.password.lable }} {{ form.password}}
-    {{ form.confirm_password.lable }} {{ form.confirm_password }}
     {{ form.submit }}
     </form>
 {% endblock content %}
