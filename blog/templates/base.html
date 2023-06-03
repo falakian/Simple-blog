@@ -1,0 +1,18 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<title>Weblog</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+</head>
+<body>
+    <div id="layout">
+        <div id="header">
+          <h1 id="logo"><a href=" ">Network</a></h1>
+    {% block content %} {% endblock content %}
+</div>
+</div>
+</body>
+</html>
