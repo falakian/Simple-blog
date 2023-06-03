@@ -1,4 +1,4 @@
-from A.blog import db
+from blog import db
 import datetime
 class User(db.Model):
     id=db.Column(db.Integer , primary_key=True)

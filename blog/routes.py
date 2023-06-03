@@ -1,7 +1,7 @@
 from flask import render_template , redirect , url_for
 from blog import app , db , bcrypt
-from A.blog.form import RegistrationForm , LoginForm
-from A.blog.models import User , Post
+from blog.form import RegistrationForm , LoginForm
+from blog.models import User , Post
 
 @app.route("/" , methods=['GET'])
 def home():
