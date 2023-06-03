@@ -3,10 +3,10 @@
 {% block content %}
     <form action="" method="post">
     {{form.csrf_token}}
-    {{ form.username.lable  }} {{ form.username }}
-    {{ form.email.lable  }} {{ form.email }}
-    {{ form.password.lable }} {{ form.password}}
-    {{ form.confirm_password.lable }} {{ form.confirm_password }}
+    {{ form.username.label  }} {{ form.username }}
+    {{ form.email.label  }} {{ form.email }}
+    {{ form.password.label }} {{ form.password}}
+    {{ form.confirm_password.label }} {{ form.confirm_password }}
     {{ form.submit }}
     </form>
 {% endblock content %}

@@ -11,8 +11,16 @@
     <div id="layout">
         <div id="header">
           <h1 id="logo"><a href=" ">Network</a></h1>
-    {% block content %} {% endblock content %}
+          <hr class="noscreen" />
+          <div id="quicknav"> <a href="">Home</a> <a href="">Contact</a> <a href="">Sitemap</a> </div>
 </div>
+<!--<hr class="noscreen" />-->
+{% include 'inc/nav.html' %}
+
+<div id="container" class="box">
+</div>
+  {% include 'inc/messages.html' %}
+  {% block content %} {% endblock content %}
 </div>
 </body>
 </html>
