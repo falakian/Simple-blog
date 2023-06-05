@@ -4,9 +4,8 @@
     {% include 'inc/form_errors.html' %}
     <form action="" method="post">
     {{form.csrf_token}}
-    {{ form.username.label }} {{ form.username }}
-    {{ form.password.label }} {{ form.password}}
-    {{ form.remember.label }} {{ form.remember}}<br/>
+    {{ form.title.label }} {{ form.title }}
+    {{ form.content.label }} {{ form.content}}
     {{ form.submit }}
     </form>
 {% endblock content %}

@@ -11,16 +11,26 @@
     <div id="layout">
         <div id="header">
           <h1 id="logo"><a href=" ">Network</a></h1>
+          <span id="slogan">{% block user %} {% endblock user %}</span>
           <hr class="noscreen" />
-          <div id="quicknav"> <a href="">Home</a> <a href="">About</a> <a href="">Contact us</a> </div>
-</div>
-<!--<hr class="noscreen" />-->
+          <div id="quicknav"> <a href="{{ url_for('home' , page=1) }}">Home</a> <a href="{{ url_for('about') }}"> . About</a> <a href="{{ url_for('contact') }}">.  Contact us</a> </div>
+          <div class="count">
+              <h2 id="count2">Number of users :</h2>
+          </div>
+        </div>
 {% include 'inc/nav.html' %}
 
 <div id="container" class="box">
-</div>
   {% include 'inc/messages.html' %}
   {% block content %} {% endblock content %}
 </div>
+</div>
+  <div id="footer">
+    <div id="foot">
+      <div id="page-bottom"> <a href="#header">Go up</a> </div>
+      <p class="f-left">&copy; 2023 - AlirezaFalakian</p>
+      <p class="f-right">network</p>
+  </div>
+  </div>
 </body>
 </html>
