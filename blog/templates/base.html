@@ -15,7 +15,7 @@
           <hr class="noscreen" />
           <div id="quicknav"> <a href="{{ url_for('home' , page=1) }}">Home</a> <a href="{{ url_for('about') }}"> . About</a> <a href="{{ url_for('contact') }}">.  Contact us</a> </div>
           <div class="count">
-              <h2 id="count2">Number of users :</h2>
+              <h2 id="count2">Number of users :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ count }}</h2>
           </div>
         </div>
 {% include 'inc/nav.html' %}
@@ -32,5 +32,6 @@
       <p class="f-right">network</p>
   </div>
   </div>
+  <script src="../static/fechapi.js"></script>
 </body>
 </html>

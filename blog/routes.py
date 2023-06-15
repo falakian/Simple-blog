@@ -4,12 +4,22 @@ from blog.form import RegistrationForm , LoginForm , UpdateProfileForm , NewPost
 from blog.models import User , Post
 from flask_login import login_user , current_user , logout_user , login_required
 
-
+@app.route('/')
+def index():
+    return redirect(url_for('home' , page=1))
 @app.route("/index/<int:page>" , methods=['GET'])
 def home(page=1):
     per_page=3
-    posts = Post.query.paginate(page=page ,per_page=per_page ,error_out= False).items
-    return render_template('home.html' , posts=posts)
+    posts = Post.query.order_by(Post.date.desc()).paginate(page=page ,per_page=per_page ,error_out= True).items
+    #count_user = db.session.query(User).count()
+    count_post = db.session.query(Post).count()
+    #render_template('base.html' , count=count_user)
+    return render_template('home.html' , posts=posts , count=count_post ,page=page)
+
+@app.route('/api/fetch')
+def count():
+    count_user = db.session.query(User).count()
+    return str(count_user)
 
 @app.route("/post/<int:post_id>")
 def detail(post_id):
@@ -79,7 +89,7 @@ def login():
             login_user(user , remember=form.remember.data)
             next_page = request.args.get('next')
             flash('You have successfully logged in' , 'success')
-            return redirect(next_page if next_page else url_for('home'))
+            return redirect(next_page if next_page else url_for('home' ,page=1))
         else:
             flash('Username or password is incorrect' , 'danger')
     return render_template('login.html' , form=form)

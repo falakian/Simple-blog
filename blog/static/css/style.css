@@ -16,10 +16,10 @@ form {
     }
 .count{
         position: absolute;
-        bottom: 21px;
-        right: 80px;
+        top: 93px;
+        right: 35px;
         }
-#count2{ margin:0; width: 125px; font-size: 85%; border: 0;color: #ee8100;}
+#count2{ margin:0; width: 180px; font-size: 115%; border: 0;color: #ee8100;}
 #post {
     width: 650px;
     height: 200px;
@@ -388,11 +388,24 @@ a.more:hover{color: #ffddb4;}
                 background-color: #0257d7;
                 color: white;
             }
+
+.button-d{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:space-between;
+}
 .f-left {float:left; color: white;}
 .f-right {float:right; color: white;}
 #footer  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
     height: 85px;
     background: url(../img/footer-bg.jpg) repeat-x bottom;
+    width: 100vw;
+    top: 160vh;
     }
 #page-bottom{
         height: 46px;

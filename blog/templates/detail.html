@@ -2,8 +2,10 @@
 
 {% block content %}
     {% if post.author == current_user %}
+    <div class=" button-d">
        <div id="delete"> <a  href="{{ url_for('delete' , post_id=post.id)}}">Delete</a></div>
         <div id="update"> <a  href="{{url_for('update' , post_id=post.id)}}">Update</a></div>
+    </div>
     {%endif %}
     <div>
         <h3>{{ post.title }} </h3>

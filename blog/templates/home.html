@@ -8,8 +8,8 @@
             <p>{{ (post.content[:680] + '  ......  ')}} <a href="{{url_for('detail' , post_id = post.id)}}" class="more">MORE</a></p>
         </div>
     {% endfor %}
-    {% if posts.has_prev %}<a href="{{ url_for('home', page=posts.prev_num) }}">&lt;&lt; Newer posts</a>
+    {% if page > 1 %}<a href="{{ url_for('home', page = page - 1) }}">&lt;&lt; Newer posts</a>
     {% else %}&lt;&lt; Newer posts{% endif %} | 
-    {% if posts.has_next %}<a href="{{ url_for('home', page=posts.next_num) }}">Older posts &gt;&gt;</a>
+    {% if count > page * 3 %}<a href="{{ url_for('home', page=page+1) }}">Older posts &gt;&gt;</a>
     {% else %}Older posts &gt;&gt;{% endif %}
 {% endblock content %}
