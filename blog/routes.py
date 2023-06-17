@@ -11,9 +11,7 @@ def index():
 def home(page=1):
     per_page=3
     posts = Post.query.order_by(Post.date.desc()).paginate(page=page ,per_page=per_page ,error_out= True).items
-    #count_user = db.session.query(User).count()
     count_post = db.session.query(Post).count()
-    #render_template('base.html' , count=count_user)
     return render_template('home.html' , posts=posts , count=count_post ,page=page)
 
 @app.route('/api/fetch')
