@@ -62,6 +62,6 @@ start a blog
 ```
 	$ python run.py
 ```
-![2](https://github.com/falakian/Simple-blog/assets/107622368/272e040d-4a9f-4661-aa7f-d751125dff2e)
+![2](https://github.com/falakian/Simple-blog/assets/107622368/dcaf7bf3-14f4-4a67-92fa-1b403e62b28d)
 
-![3](https://github.com/falakian/Simple-blog/assets/107622368/9959b6b9-8312-42fa-9177-da4c6a1f403e)
+![3](https://github.com/falakian/Simple-blog/assets/107622368/8024c5aa-27c5-4f58-b0e3-5f12ac2a56c1)
