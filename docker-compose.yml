@@ -7,7 +7,8 @@ services:
     restart: always
     expose: 
       - 5000
-
+    environment:
+      - BASE_URL = 'http://127.0.0.1'
   nginx:
     build: ./nginx
     container_name: nginx
